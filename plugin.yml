@@ -1,0 +1,70 @@
+main: me.jamboxman5.jahssentials.main.Main
+name: Jahssentials
+version: 1.0.0
+author: Jamboxman5
+api-version: 1.19
+depend:
+commands:
+  Fly:
+    aliases: flight
+  Creative:
+    aliases: gmc
+  Survival:
+    aliases: gms
+  Apply:
+  Spectator:
+    aliases: gmsp
+  Adventure:
+    aliases: gma
+  Teleport:
+    aliases: tp
+  Gamemode:
+    aliases: gm
+  Reply:
+    aliases: r
+  Tphere:
+    aliases: 
+    - tph
+    - summonplayer
+  Msg:
+    aliases:
+    - m
+    - w
+    - dm
+    - pm
+    - tell
+    - whisper
+  Flyspeed:
+  Feed:
+  Sethealth:
+  Setfood:
+  Setsaturation:
+  Help:
+  Links:
+  Ranks:
+  Discord:
+  Login:
+  Logoff:
+  Jahsay:
+  Map:
+  Invsee:
+  Jahcolors:
+  Tpask:
+    aliases:
+    - tpa
+  Tpaccept:
+  Setmodeldata:
+  Tpahere:
+  Tpdeny:
+  Nomoreores:
+  Blockme:
+  Tppos:
+  Enchant:
+  Setdurability:
+  Spec:
+  Unspec:
+  Buy:
+  Undue:
+  Set:
+  Replace:
+  
