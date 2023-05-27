@@ -48,4 +48,5 @@ Current Features:
   - /spec (Puts moderators into restricted spectator mode
   - /unspec (Returns moderators to original status)
   - /buy (Gives a link to the server store)
+  - /masscraft (allows item crafting en masse)
   
