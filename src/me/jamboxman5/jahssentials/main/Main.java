@@ -52,7 +52,8 @@ public class Main extends JavaPlugin {
 			getCommand("enchant").setExecutor((CommandExecutor) new Enchant());
 			getCommand("tppos").setExecutor((CommandExecutor) new Teleport());
 			getCommand("setdurability").setExecutor((CommandExecutor) new SetterCommands());
-			
+			getCommand("masscraft").setExecutor((CommandExecutor) new MassCraft());
+
 			//MULTICOMMAND EXECUTORS
 			CommandExecutor spectateExecutor = new Spectate();
 			getCommand("spec").setExecutor(spectateExecutor);
@@ -72,7 +73,8 @@ public class Main extends JavaPlugin {
 			getServer().getPluginManager().registerEvents(new EXAntiBuildListener(), this);
 			getServer().getPluginManager().registerEvents(new InvseeListener(), this);
 			getServer().getPluginManager().registerEvents(new WandListener(), this);
-			
+			getServer().getPluginManager().registerEvents(new RecipeMenuListener(), this);
+			getServer().getPluginManager().registerEvents(new MaterialsMenuListener(), this);
 		} catch (Exception e) {
 			
 			Bukkit.getLogger().warning("Failed to load Jahssentials!");
