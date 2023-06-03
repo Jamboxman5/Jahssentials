@@ -16,7 +16,6 @@ import me.jamboxman5.jahssentials.commands.Jahsay;
 import me.jamboxman5.jahssentials.commands.Login;
 import me.jamboxman5.jahssentials.commands.Logoff;
 import me.jamboxman5.jahssentials.commands.MassCraft;
-import me.jamboxman5.jahssentials.commands.Nick;
 import me.jamboxman5.jahssentials.commands.NoMoreOres;
 import me.jamboxman5.jahssentials.commands.Replace;
 import me.jamboxman5.jahssentials.commands.Set;
