@@ -103,7 +103,7 @@ public class Main extends JavaPlugin {
 			
 			//LISTENERS
 			getServer().getPluginManager().registerEvents(new ChatFormatListener(), this);
-			getServer().getPluginManager().registerEvents(new JoinQuitListener(), this);
+//			getServer().getPluginManager().registerEvents(new JoinQuitListener(), this);
 			getServer().getPluginManager().registerEvents(new EXAntiBuildListener(), this);
 			getServer().getPluginManager().registerEvents(new InvseeListener(), this);
 			getServer().getPluginManager().registerEvents(new WandListener(), this);
