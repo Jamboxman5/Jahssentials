@@ -1,37 +1,23 @@
 package me.jamboxman5.jahssentials.listeners;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import me.jamboxman5.jahssentials.main.Main;
 import me.jamboxman5.jahssentials.util.Colors;
-import me.jamboxman5.jahssentials.util.UserData;
 
 public class JoinQuitListener implements Listener {
 	
 	@EventHandler 
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
-		UserData.activate(p);
-		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
+//		UserData.activate(p);
+		e.setJoinMessage(p.getDisplayName() + Colors.BLUE + " has joined the server!");				
 
-			@Override
-			public void run() {
-				try {
-					Thread.sleep(100);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				e.setJoinMessage(p.getDisplayName() + Colors.BLUE + " has joined the server!");				
-			}
 			
 			
-		});
 //		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
 //			@Override
 //			public void run() {
