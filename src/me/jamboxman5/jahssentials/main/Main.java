@@ -1,21 +1,59 @@
 package me.jamboxman5.jahssentials.main;
 
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.jamboxman5.jahssentials.commands.*;
-import me.jamboxman5.jahssentials.listeners.*;
+import me.jamboxman5.jahssentials.commands.Blockme;
+import me.jamboxman5.jahssentials.commands.DirectMessage;
+import me.jamboxman5.jahssentials.commands.Enchant;
+import me.jamboxman5.jahssentials.commands.Feed;
+import me.jamboxman5.jahssentials.commands.Fly;
+import me.jamboxman5.jahssentials.commands.Gamemode;
+import me.jamboxman5.jahssentials.commands.InfoCommands;
+import me.jamboxman5.jahssentials.commands.Invsee;
+import me.jamboxman5.jahssentials.commands.Jahsay;
+import me.jamboxman5.jahssentials.commands.Login;
+import me.jamboxman5.jahssentials.commands.Logoff;
+import me.jamboxman5.jahssentials.commands.MassCraft;
+import me.jamboxman5.jahssentials.commands.Nick;
+import me.jamboxman5.jahssentials.commands.NoMoreOres;
+import me.jamboxman5.jahssentials.commands.Replace;
+import me.jamboxman5.jahssentials.commands.Set;
+import me.jamboxman5.jahssentials.commands.SetterCommands;
+import me.jamboxman5.jahssentials.commands.Spectate;
+import me.jamboxman5.jahssentials.commands.Teleport;
+import me.jamboxman5.jahssentials.commands.Tpask;
+import me.jamboxman5.jahssentials.commands.Undo;
+import me.jamboxman5.jahssentials.listeners.ChatFormatListener;
+import me.jamboxman5.jahssentials.listeners.EXAntiBuildListener;
+import me.jamboxman5.jahssentials.listeners.InvseeListener;
+import me.jamboxman5.jahssentials.listeners.JoinQuitListener;
+import me.jamboxman5.jahssentials.listeners.MaterialsMenuListener;
+import me.jamboxman5.jahssentials.listeners.RecipeMenuListener;
+import me.jamboxman5.jahssentials.listeners.WandListener;
 import me.jamboxman5.jahssentials.util.InfoStorage;
+import me.jamboxman5.jahssentials.util.UserData;
 
 public class Main extends JavaPlugin {
 	
 	public static InfoStorage infoStorage = new InfoStorage();
+	public static Main plugin;
 
 	@Override
 	public void onEnable() {
 		
+		plugin = this;
+		
 		try {
+			
+			//SETUP USERDATA ON RELOADS
+			for (Player p : Bukkit.getOnlinePlayers()) {
+				UserData.activate(p);
+			}
 			
 			//COMMANDS
 			getCommand("fly").setExecutor((CommandExecutor) new Fly());
@@ -53,6 +91,7 @@ public class Main extends JavaPlugin {
 			getCommand("tppos").setExecutor((CommandExecutor) new Teleport());
 			getCommand("setdurability").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("masscraft").setExecutor((CommandExecutor) new MassCraft());
+			getCommand("nick").setExecutor((CommandExecutor) new Nick());
 
 			//MULTICOMMAND EXECUTORS
 			CommandExecutor spectateExecutor = new Spectate();
@@ -69,7 +108,7 @@ public class Main extends JavaPlugin {
 			
 			//LISTENERS
 			getServer().getPluginManager().registerEvents(new ChatFormatListener(), this);
-			getServer().getPluginManager().registerEvents(new JoinQuitListener(this), this);
+			getServer().getPluginManager().registerEvents(new JoinQuitListener(), this);
 			getServer().getPluginManager().registerEvents(new EXAntiBuildListener(), this);
 			getServer().getPluginManager().registerEvents(new InvseeListener(), this);
 			getServer().getPluginManager().registerEvents(new WandListener(), this);
@@ -84,6 +123,15 @@ public class Main extends JavaPlugin {
 	
 	@Override 
 	public void onDisable() {
+		//SAVE USERDATA ON UNLOADS
+		Bukkit.getScheduler().runTask(Main.plugin, new Runnable() {
+			@Override
+			public void run() {
+				for (UUID id : UserData.onlineUsers.keySet()) {
+					UserData.deactivate(id);
+				}
+			}
+		});
 		
 		Bukkit.getLogger().info("Jahssentials Unloaded and Disabled!");
 		
