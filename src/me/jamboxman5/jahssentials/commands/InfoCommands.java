@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.jamboxman5.jahssentials.util.Colors;
 import net.md_5.bungee.api.ChatColor;
 
 public class InfoCommands implements CommandExecutor {
@@ -77,13 +78,13 @@ public class InfoCommands implements CommandExecutor {
 			Player p = (Player) sender;
 			p.sendMessage(ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "---=====" + ChatColor.translateAlternateColorCodes('&', "&7&l[ " + ChatColor.of("#FFD700") + "&lJahColors &7&l]") + ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=====---");
 			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#FFD700" + ChatColor.GRAY + "]" + " - " + 
-			ChatColor.of("#FFD700") + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			Colors.GOLD + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
 			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#49B3FF" + ChatColor.GRAY + "]" + " - " + 
-			ChatColor.of("#49B3FF") + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			Colors.BLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
 			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#00E8FF" + ChatColor.GRAY + "]" + " - " + 
-			ChatColor.of("#00E8FF") + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
-			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#779AD8" + ChatColor.GRAY + "]" + " - " + 
-			ChatColor.of("#779AD8") + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			Colors.BRIGHTBLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#76B9E6" + ChatColor.GRAY + "]" + " - " + 
+			Colors.PALEBLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
 		} else return;
 		
 	}
