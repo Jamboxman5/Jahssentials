@@ -27,7 +27,6 @@ import me.jamboxman5.jahssentials.commands.Undo;
 import me.jamboxman5.jahssentials.listeners.ChatFormatListener;
 import me.jamboxman5.jahssentials.listeners.EXAntiBuildListener;
 import me.jamboxman5.jahssentials.listeners.InvseeListener;
-import me.jamboxman5.jahssentials.listeners.JoinQuitListener;
 import me.jamboxman5.jahssentials.listeners.MaterialsMenuListener;
 import me.jamboxman5.jahssentials.listeners.RecipeMenuListener;
 import me.jamboxman5.jahssentials.listeners.WandListener;
