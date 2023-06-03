@@ -51,9 +51,9 @@ public class Main extends JavaPlugin {
 		try {
 			
 			//SETUP USERDATA ON RELOADS
-			for (Player p : Bukkit.getOnlinePlayers()) {
-				UserData.activate(p);
-			}
+//			for (Player p : Bukkit.getOnlinePlayers()) {
+//				UserData.activate(p);
+//			}
 			
 			//COMMANDS
 			getCommand("fly").setExecutor((CommandExecutor) new Fly());
@@ -124,14 +124,14 @@ public class Main extends JavaPlugin {
 	@Override 
 	public void onDisable() {
 		//SAVE USERDATA ON UNLOADS
-		Bukkit.getScheduler().runTask(Main.plugin, new Runnable() {
-			@Override
-			public void run() {
-				for (UUID id : UserData.onlineUsers.keySet()) {
-					UserData.deactivate(id);
-				}
-			}
-		});
+//		Bukkit.getScheduler().runTask(Main.plugin, new Runnable() {
+//			@Override
+//			public void run() {
+//				for (UUID id : UserData.onlineUsers.keySet()) {
+//					UserData.deactivate(id);
+//				}
+//			}
+//		});
 		
 		Bukkit.getLogger().info("Jahssentials Unloaded and Disabled!");
 		

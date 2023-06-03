@@ -17,7 +17,21 @@ public class JoinQuitListener implements Listener {
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
 		UserData.activate(p);
-		e.setJoinMessage(p.getDisplayName() + Colors.BLUE + " has joined the server!");
+		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
+
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				e.setJoinMessage(p.getDisplayName() + Colors.BLUE + " has joined the server!");				
+			}
+			
+			
+		});
 //		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
 //			@Override
 //			public void run() {
@@ -31,12 +45,12 @@ public class JoinQuitListener implements Listener {
 	public void onLeave(PlayerQuitEvent e) {
 		Player p = e.getPlayer();
 		e.setQuitMessage(p.getDisplayName() + Colors.BRIGHTRED + " has left the server!");
-		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
-			@Override
-			public void run() {
-				UserData.deactivate(p.getUniqueId());
-			}
-		});
+//		Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new Runnable() {
+//			@Override
+//			public void run() {
+//				UserData.deactivate(p.getUniqueId());
+//			}
+//		});
 	}
 	
 }
