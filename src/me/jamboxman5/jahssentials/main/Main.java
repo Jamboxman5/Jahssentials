@@ -87,7 +87,7 @@ public class Main extends JavaPlugin {
 			getCommand("tppos").setExecutor((CommandExecutor) new Teleport());
 			getCommand("setdurability").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("masscraft").setExecutor((CommandExecutor) new MassCraft());
-			getCommand("nick").setExecutor((CommandExecutor) new Nick());
+//			getCommand("nick").setExecutor((CommandExecutor) new Nick());
 
 			//MULTICOMMAND EXECUTORS
 			CommandExecutor spectateExecutor = new Spectate();
