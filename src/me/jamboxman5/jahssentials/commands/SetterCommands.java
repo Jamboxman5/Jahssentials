@@ -185,7 +185,6 @@ if (sender.hasPermission("jahcore.admin")) {
 					int level = Integer.parseInt(args[1]);
 					
 					if (level <= target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() && level >= 0) {
-						
 						target.setHealth(level);
 						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#49B3FF")+ "Target &a&l" + target.getName() + ChatColor.of("#49B3FF") + "'s health has been set to &c&l" + level));
 						return;
