@@ -72,7 +72,7 @@ if (sender.hasPermission("jahcore.admin")) {
 
 					int level = Integer.parseInt(args[1]);
 					
-					if (level <= 100 && level >= 0) {
+					if (level <= 1000 && level >= 0) {
 						
 						target.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(level);
 						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#49B3FF")+ "Target &a&l" + target.getName() + ChatColor.of("#49B3FF") + "'s max health has been set to &c&l" + level));
@@ -80,7 +80,7 @@ if (sender.hasPermission("jahcore.admin")) {
 						
 					}
 					
-					sender.sendMessage(ChatColor.RED + "Level must be between 0 and 100!");
+					sender.sendMessage(ChatColor.RED + "Level must be between 0 and 1000!");
 					return;
 					
 				}
@@ -184,7 +184,7 @@ if (sender.hasPermission("jahcore.admin")) {
 
 					int level = Integer.parseInt(args[1]);
 					
-					if (level <= 20 && level >= 0) {
+					if (level <= target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() && level >= 0) {
 						
 						target.setHealth(level);
 						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#49B3FF")+ "Target &a&l" + target.getName() + ChatColor.of("#49B3FF") + "'s health has been set to &c&l" + level));
@@ -192,7 +192,7 @@ if (sender.hasPermission("jahcore.admin")) {
 						
 					}
 					
-					sender.sendMessage(ChatColor.RED + "Level must be between 0 and 20!");
+					sender.sendMessage(ChatColor.RED + "Health must be between 0 and " + target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getBaseValue() + "!");
 					return;
 					
 				}
