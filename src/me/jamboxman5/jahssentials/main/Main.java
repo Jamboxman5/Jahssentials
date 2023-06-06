@@ -1,10 +1,7 @@
 package me.jamboxman5.jahssentials.main;
 
-import java.util.UUID;
-
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandExecutor;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.jamboxman5.jahssentials.commands.Blockme;
@@ -36,7 +33,6 @@ import me.jamboxman5.jahssentials.listeners.MaterialsMenuListener;
 import me.jamboxman5.jahssentials.listeners.RecipeMenuListener;
 import me.jamboxman5.jahssentials.listeners.WandListener;
 import me.jamboxman5.jahssentials.util.InfoStorage;
-import me.jamboxman5.jahssentials.util.UserData;
 
 public class Main extends JavaPlugin {
 	
@@ -66,6 +62,7 @@ public class Main extends JavaPlugin {
 			getCommand("teleport").setExecutor((CommandExecutor) new Teleport());
 			getCommand("tphere").setExecutor((CommandExecutor) new Teleport());
 			getCommand("sethealth").setExecutor((CommandExecutor) new SetterCommands());
+			getCommand("setmaxhealth").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("setfood").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("setsaturation").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("gamemode").setExecutor((CommandExecutor) new Gamemode());
