@@ -60,6 +60,7 @@ public class Main extends JavaPlugin {
 			getCommand("teleport").setExecutor((CommandExecutor) new Teleport());
 			getCommand("tphere").setExecutor((CommandExecutor) new Teleport());
 			getCommand("sethealth").setExecutor((CommandExecutor) new SetterCommands());
+			getCommand("setmaxhealth").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("setfood").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("setsaturation").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("gamemode").setExecutor((CommandExecutor) new Gamemode());
