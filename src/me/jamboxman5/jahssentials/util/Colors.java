@@ -9,12 +9,12 @@ public class Colors {
 	
 	private static final Pattern pattern = Pattern.compile("&#[a-fA-F0-9]{6}");
 	
-	public static final String GOLD = ChatColor.of("#FFD700") + "";
-	public static final String YELLOW = ChatColor.of("#FFFF00") + "";
-	public static final String BLUE = ChatColor.of("#49B3FF") + "";
-	public static final String PALEBLUE = ChatColor.of("#76B9E6") + "";
-	public static final String BRIGHTBLUE = ChatColor.of("#00E8FF") + "";
-	public static final String BRIGHTRED = ChatColor.of("#FF0000") + "";
+	public static final ChatColor GOLD = ChatColor.of("#FFD700");
+	public static final ChatColor YELLOW = ChatColor.of("#FFFF00");
+	public static final ChatColor BLUE = ChatColor.of("#49B3FF");
+	public static final ChatColor PALEBLUE = ChatColor.of("#76B9E6");
+	public static final ChatColor BRIGHTBLUE = ChatColor.of("#00E8FF");
+	public static final ChatColor BRIGHTRED = ChatColor.of("#FF0000");
 	public static String format(String before) {
 		return ChatColor.translateAlternateColorCodes('&', before);
 	}
