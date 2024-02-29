@@ -29,6 +29,12 @@ public class SetterCommands implements CommandExecutor {
 			
 		}
 		
+		if (label.equalsIgnoreCase("getmodeldata")) {
+
+			getModelData(sender, args);
+			
+		}
+		
 		if (label.equalsIgnoreCase("sethealth")) {
 			
 			setHealth(sender, args);
@@ -59,6 +65,16 @@ public class SetterCommands implements CommandExecutor {
 
 		return false;
 
+	}
+
+	private void getModelData(CommandSender sender, String[] args) {
+		if (!(sender instanceof Player)) return;
+		if (!sender.hasPermission("jahcore.admin")) {
+			sender.sendMessage(ChatColor.RED + "You don't have permission to do that!");
+			return;
+		}
+		ItemStack item = ((Player)sender).getInventory().getItemInMainHand();
+		sender.sendMessage(item.getItemMeta().getCustomModelData() + "");
 	}
 
 	private void setMaxHealth(CommandSender sender, String[] args) {

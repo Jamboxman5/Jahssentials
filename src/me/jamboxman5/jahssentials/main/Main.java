@@ -77,6 +77,7 @@ public class Main extends JavaPlugin {
 			getCommand("invsee").setExecutor((CommandExecutor) new Invsee(this));
 			getCommand("jahcolors").setExecutor((CommandExecutor) new InfoCommands());
 			getCommand("setmodeldata").setExecutor((CommandExecutor) new SetterCommands());
+			getCommand("getmodeldata").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("nomoreores").setExecutor((CommandExecutor) new NoMoreOres(this));
 			getCommand("blockme").setExecutor((CommandExecutor) new Blockme());
 			getCommand("set").setExecutor((CommandExecutor) new Set(this));

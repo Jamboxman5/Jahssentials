@@ -85,6 +85,23 @@ public class InfoCommands implements CommandExecutor {
 			Colors.BRIGHTBLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
 			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#76B9E6" + ChatColor.GRAY + "]" + " - " + 
 			Colors.PALEBLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#FFFF00" + ChatColor.GRAY + "]" + " - " + 
+			Colors.YELLOW + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#FF0000" + ChatColor.GRAY + "]" + " - " + 
+					Colors.BRIGHTRED + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#C2A389" + ChatColor.GRAY + "]" + " - " + 
+					Colors.MUDBROWN + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+					
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#007AD0" + ChatColor.GRAY + "]" + " - " + 
+					Colors.DARKBLUE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+					
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#65E057" + ChatColor.GRAY + "]" + " - " + 
+					Colors.NATUREGREEN + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+					
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#E6008A" + ChatColor.GRAY + "]" + " - " + 
+					Colors.BRIGHTPURPLE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
+			p.sendMessage(ChatColor.GRAY + "[" + ChatColor.of("#00E8FF") + "#FBE7C6" + ChatColor.GRAY + "]" + " - " + 
+					Colors.BEIGE + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "" + ChatColor.UNDERLINE + "||||||||||||||||||");
 		} else return;
 		
 	}

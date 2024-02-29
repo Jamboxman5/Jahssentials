@@ -54,6 +54,7 @@ commands:
     - tpa
   Tpaccept:
   Setmodeldata:
+  Getmodeldata:
   Tpahere:
   Tpdeny:
   Nomoreores:
