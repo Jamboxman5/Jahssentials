@@ -19,7 +19,7 @@ public class Teleport implements CommandExecutor {
 				
 				Player player = (Player) sender;
 				
-				if (player.hasPermission("jahcore.teleport")) {
+				if (player.hasPermission("jahssentials.teleport")) {
 					
 					if (args.length == 2) {
 						
@@ -94,7 +94,7 @@ public class Teleport implements CommandExecutor {
 				
 				Player player = (Player) sender;
 				
-				if (player.hasPermission("spc.teleport")) {
+				if (player.hasPermission("jahssentials.teleport")) {
 					
 					if (args.length == 1) {
 					
@@ -174,8 +174,12 @@ public class Teleport implements CommandExecutor {
 		}
 		
 		if (label.equalsIgnoreCase("tppos")) {
+			if (!sender.hasPermission("jahssential.tppos")) {
+				sender.sendMessage(ChatColor.RED + "You don't have permission to do that");
+				return true;
+			}
 			boolean isTargeted = false;
-			if (args.length > 4) {
+			if (args.length < 3) {
 				sender.sendMessage(ChatColor.RED + "Usage: /tppos [player] <x> <y> <z>");
 				return true;
 			}

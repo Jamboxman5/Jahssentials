@@ -111,7 +111,8 @@ public class InfoCommands implements CommandExecutor {
 			// player
 			Player player = (Player) sender;
 			if (player.hasPermission("jahcraft.info")) {
-				player.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#FFD700") + "" + ChatColor.BOLD + ">> " + ChatColor.GREEN + "&aCheck out the dynmap! &7&nmc.jahcraft.net:8123"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#FFD700") + "" + ChatColor.BOLD + ">> " + ChatColor.GREEN + "&aTowny Classic &m->&r &7&nmc.jahcraft.net:8123"));
+				player.sendMessage(ChatColor.translateAlternateColorCodes('&', ChatColor.of("#FFD700") + "" + ChatColor.BOLD + ">> " + ChatColor.GREEN + "&aTownyPlus &m->&r &7&nmc.jahcraft.net:8100"));
 				return;
 			}
 			player.sendMessage(ChatColor.RED + "You do not have permission to perform this command.");
@@ -129,7 +130,7 @@ public class InfoCommands implements CommandExecutor {
 		if (sender instanceof Player) {
 			// player
 			Player player = (Player) sender;
-			if (player.hasPermission("jahcraft.info")) {
+			if (player.hasPermission("jahcraft.info.ranks")) {
 				player.sendMessage(ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "---=====" + ChatColor.translateAlternateColorCodes('&', "&7&l[ " + ChatColor.of("#FFD700") + "&lRanks &7&l]") + ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=====---");
 				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[" + ChatColor.of("#FFFFFF") + "Beginner" + ChatColor.translateAlternateColorCodes('&', "&7] - ") + ChatColor.of("#779AD8") + "Default rank."));
 				player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[" + ChatColor.of("#A0FF7C") + "Resident" + ChatColor.translateAlternateColorCodes('&', "&7] - ") + ChatColor.of("#779AD8") + "Earned after playing " + ChatColor.of("#00E8FF") + "2 hours" + ChatColor.of("#779AD8") + "."));
@@ -174,8 +175,9 @@ public class InfoCommands implements CommandExecutor {
 			if (player.hasPermission("jahcraft.info")) {
 				player.sendMessage(ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "---=====" + ChatColor.translateAlternateColorCodes('&', "&7&l[ " + ChatColor.of("#FFD700") + "&lLinks &7&l]") + ChatColor.of("#49B3FF") + "" + ChatColor.BOLD + "" + ChatColor.STRIKETHROUGH + "=====---");
 				player.sendMessage(ChatColor.of("#779AD8") + "Website " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://www.jahcraft.net");
-				player.sendMessage(ChatColor.of("#779AD8") + "Store " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://store.jahcraft.net");
-				player.sendMessage(ChatColor.of("#779AD8") + "Dynmap " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://mc.jahcraft.net:8123");
+//				player.sendMessage(ChatColor.of("#779AD8") + "Store " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://store.jahcraft.net");
+				player.sendMessage(ChatColor.of("#779AD8") + "Dynmap (TownyClassic)" + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://mc.jahcraft.net:8123");
+				player.sendMessage(ChatColor.of("#779AD8") + "BlueMap (TownyPlus) " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://mc.jahcraft.net:8100");
 				player.sendMessage(ChatColor.of("#779AD8") + "Discord " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " http://discord.gg/WfmYbH9knT§r");
 				player.sendMessage(ChatColor.of("#779AD8") + "Staff Application " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#00E8FF") + " https://forms.gle/16zgA6RnFzND85U27");
 				return;
@@ -308,7 +310,7 @@ public class InfoCommands implements CommandExecutor {
 					player.sendMessage(ChatColor.of("#00E8FF") + "/mall " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#779AD8") + " Instantly teleports you to the mall.");
 					player.sendMessage(ChatColor.of("#00E8FF") + "/tpa <player> " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#779AD8") + " Sends a teleport request to the named player.");
 					player.sendMessage(ChatColor.of("#00E8FF") + "/tpahere <player> " + ChatColor.of("#AAAAAA") + " - " + ChatColor.of("#779AD8") + " Sends a request to teleport the named player to you.");
-					player.sendMessage(ChatColor.of("#49B3FF") + "Use " + ChatColor.of("#00E8FF") + "/help 3" + ChatColor.of("#49B3FF") + " to view the next page.");
+					player.sendMessage(ChatColor.of("#49B3FF") + "Use " + ChatColor.of("#00E8FF") + "/help 4" + ChatColor.of("#49B3FF") + " to view the next page.");
 					return;
 				}
 				
