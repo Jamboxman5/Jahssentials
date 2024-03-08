@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import me.jamboxman5.jahssentials.commands.Blockme;
+import me.jamboxman5.jahssentials.commands.BroadcastRaw;
 import me.jamboxman5.jahssentials.commands.DirectMessage;
 import me.jamboxman5.jahssentials.commands.Enchant;
 import me.jamboxman5.jahssentials.commands.Feed;
@@ -87,6 +88,7 @@ public class Main extends JavaPlugin {
 			getCommand("tppos").setExecutor((CommandExecutor) new Teleport());
 			getCommand("setdurability").setExecutor((CommandExecutor) new SetterCommands());
 			getCommand("masscraft").setExecutor((CommandExecutor) new MassCraft());
+			getCommand("bcraw").setExecutor((CommandExecutor) new BroadcastRaw());
 //			getCommand("nick").setExecutor((CommandExecutor) new Nick());
 
 			//MULTICOMMAND EXECUTORS
